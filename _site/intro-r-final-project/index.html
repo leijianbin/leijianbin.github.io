@@ -1,0 +1,448 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Intro to R - Final Project &#8211; Blog > Ray Lei</title>
+<meta name="description" content="Intro to R - Final Project">
+<meta name="keywords" content="OIT, ITEC587, Statistical-Computing">
+
+
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Intro to R - Final Project">
+<meta property="og:description" content="Intro to R - Final Project">
+<meta property="og:url" content="/intro-r-final-project/">
+<meta property="og:site_name" content="Blog > Ray Lei">
+
+
+
+
+
+<link rel="canonical" href="/intro-r-final-project/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Blog > Ray Lei Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<!-- Webfonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+
+<style type="text/css">body {background-image:url(/images/triangular.png);}</style>
+
+
+</head>
+
+<body id="post" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<nav id="dl-menu" class="dl-menuwrapper" role="navigation">
+	<button class="dl-trigger">Open Menu</button>
+	<ul class="dl-menu">
+		<li><a href="/">Home</a></li>
+		<li>
+			<a href="#">About</a>
+			<ul class="dl-submenu">
+				<li>
+					<img src="/images/avatar.jpg" alt="Ray Lei photo" class="author-photo">
+					<h4>Ray Lei</h4>
+					<p>Your bio goes here. It shouldn't be super long but a good sentence or two should suffice.</p>
+				</li>
+				<li><a href="/about/"><span class="btn btn-inverse">Learn More</span></a></li>
+				<li>
+					<a href="mailto:rayljb@gmail.com"><i class="fa fa-fw fa-envelope"></i> Email</a>
+				</li>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</ul><!-- /.dl-submenu -->
+		</li>
+		<li>
+			<a href="#">Posts</a>
+			<ul class="dl-submenu">
+				<li><a href="/posts/">All Posts</a></li>
+				<li><a href="/tags/">All Tags</a></li>
+			</ul>
+		</li>
+		
+	    
+	    <li><a href="/theme-setup/" >Theme Setup</a></li>
+	  
+	    
+	    <li><a href="http://mademistakes.com" target="_blank">External Link</a></li>
+	  
+	</ul><!-- /.dl-menu -->
+</nav><!-- /.dl-menuwrapper -->
+
+
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    <header class="header-title">
+      <div class="header-title-wrap">
+        
+          <h1 class="entry-title"><a href="/intro-r-final-project/" rel="bookmark" title="Intro to R - Final Project">Intro to R - Final Project</a></h1>
+        
+        <h2><span class="entry-date date published"><time datetime="2017-05-29T00:00:00-04:00">May 29, 2017</time></span></h2>
+        
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+Reading time ~9 minutes
+        </p><!-- /.entry-reading-time -->
+        
+      </div><!-- /.header-title-wrap -->
+    </header>
+    <div class="entry-content">
+      <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#1-project-overview">1. Project Overview</a></li>
+<li class="toc-entry toc-h3"><a href="#what-do-i-need-to-install">What do I Need to Install?</a></li>
+<li class="toc-entry toc-h3"><a href="#why-this-project">Why this Project?</a></li>
+<li class="toc-entry toc-h3"><a href="#what-will-i-learn">What will I learn?</a></li>
+<li class="toc-entry toc-h3"><a href="#why-is-this-important-to-my-career">Why is this Important to my Career?</a></li>
+<li class="toc-entry toc-h2"><a href="#2-project-details">2. Project Details</a></li>
+<li class="toc-entry toc-h3"><a href="#how-do-i-complete-this-project">How do I Complete this Project?</a></li>
+<li class="toc-entry toc-h3"><a href="#introduction">Introduction</a></li>
+<li class="toc-entry toc-h3"><a href="#step-one---choose-your-data-set">Step One - Choose your Data Set</a></li>
+<li class="toc-entry toc-h3"><a href="#step-two---get-organized">Step Two - Get Organized</a></li>
+<li class="toc-entry toc-h3"><a href="#step-three---explore-your-data">Step Three - Explore your Data</a></li>
+<li class="toc-entry toc-h3"><a href="#step-four---document-your-analysis">Step Four - Document your Analysis</a></li>
+<li class="toc-entry toc-h3"><a href="#step-five---knit-your-rmd-file">Step Five - Knit your RMD file</a></li>
+<li class="toc-entry toc-h3"><a href="#step-six---document-your-data-if-you-chose-your-own-data-set">Step Six - Document your Data (if you chose your own data set)</a></li>
+<li class="toc-entry toc-h2"><a href="#3-project-template-rmd-file">3. Project Template RMD File</a></li>
+<li class="toc-entry toc-h3"><a href="#formatting-notes">Formatting Notes</a></li>
+<li class="toc-entry toc-h2"><a href="#4-evaluation-and-submission">4. Evaluation and Submission</a></li>
+<li class="toc-entry toc-h3"><a href="#evaluation">Evaluation</a></li>
+<li class="toc-entry toc-h3"><a href="#submission">Submission</a></li>
+<li class="toc-entry toc-h2"><a href="#5-example-project">5. Example Project</a></li>
+<li class="toc-entry toc-h3"><a href="#example-project">Example Project</a></li>
+<li class="toc-entry toc-h3"><a href="#more-udacious-projects">More Udacious Projects</a></li>
+<li class="toc-entry toc-h2"><a href="#6-common-problem-with-project-submissions">6. Common Problem with Project Submissions</a></li>
+<li class="toc-entry toc-h3"><a href="#common-problems-with-project-submissions">Common Problems with Project Submissions</a></li>
+<li class="toc-entry toc-h3"><a href="#creating-effective-plots">Creating Effective Plots</a></li>
+</ul><!-- <link rel="stylesheet" href="http://yandex.st/highlightjs/6.2/styles/googlecode.min.css"> 
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
+ 
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript">
+ $(document).ready(function(){
+      $("h2,h3,h4,h5,h6").each(function(i,item){
+        var tag = $(item).get(0).localName;
+        $(item).attr("id","wow"+i);
+        $("#category").append('<a class="new'+tag+'" href="#wow'+i+'">'+$(this).text()+'</a></br>');
+        $(".newh2").css("margin-left",0);
+        $(".newh3").css("margin-left",20);
+        $(".newh4").css("margin-left",40);
+        $(".newh5").css("margin-left",60);
+        $(".newh6").css("margin-left",80);
+      });
+ });
+</script>
+<div id="category"></div> -->
+
+<h2 id="project-overview">
+<a id="1-project-overview" class="anchor" href="#1-project-overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Project Overview</h2>
+
+<p>In this project, you will use R and apply exploratory data analysis techniques to explore relationships in one variable to multiple variables and to explore a selected data set for distributions, outliers, and anomalies.</p>
+
+<h3 id="what-do-i-need-to-install">
+<a id="what-do-i-need-to-install" class="anchor" href="#what-do-i-need-to-install" aria-hidden="true"><span class="octicon octicon-link"></span></a>What do I Need to Install?</h3>
+<p>In order to complete the project, you will need to install R. You can download and install <a href="http://cran.r-project.org/">R from the Comprehensive R Archive Network (CRAN)</a>.</p>
+
+<p>After installing R, you will need to download and install <a href="http://www.rstudio.com/products/rstudio/download/">R Studio</a>. Chooes the appropriate installation for your operating system.</p>
+
+<p>Finally, you will need to install a few packages. We recommend opening R Studio and installing the following packages using the command line.</p>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code>install.packages("ggplot2", dependencies = T) 
+install.packages("knitr", dependencies = T)
+install.packages("dplyr", dependencies = T)
+</code></pre>
+</div>
+
+<p>For more information on installing R packages, please refer to <a href="http://www.r-bloggers.com/installing-r-packages/">Installing R Packages</a> on R Bloggers.</p>
+
+<h3 id="why-this-project">
+<a id="why-this-project" class="anchor" href="#why-this-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why this Project?</h3>
+
+<p>Exploratory Data Analysis (EDA) is the numerical and graphical examination of data characteristics and relationships before formal, rigorous statistical analyses are applied.</p>
+
+<p>EDA can lead to insights, which may uncover to other questions, and eventually predictive models. It also is an important “line of defense” against bad data and is an opportunity to notice that your assumptions or intuitions about a data set are violated.</p>
+
+<h3 id="what-will-i-learn">
+<a id="what-will-i-learn" class="anchor" href="#what-will-i-learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>What will I learn?</h3>
+<p>After completing the project, you will:</p>
+
+<ul>
+  <li>Understand the distribution of a variable and to check for anomalies and outliers</li>
+  <li>Learn how to quantify and visualize individual variables within a data set by using appropriate plots such as scatter plots, histograms, bar charts, and box plots</li>
+  <li>Explore variables to identify the most important variables and relationships within a data set before building predictive models; calculate correlations, and investigate conditional means</li>
+  <li>Learn powerful methods and visualizations for examining relationships among multiple variables, such as reshaping data frames and using aesthetics like color and shape to uncover more information</li>
+</ul>
+
+<h3 id="why-is-this-important-to-my-career">
+<a id="why-is-this-important-to-my-career" class="anchor" href="#why-is-this-important-to-my-career" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why is this Important to my Career?</h3>
+<blockquote>
+  <p>“If you are looking for a career where your services will be in high demand, you should find something where you provide a scarce, complementary service to something that is getting ubiquitous and cheap. So what’s getting ubiquitous and cheap? Data. And what is complementary to data? Analysis” — Hal Varian, UC Berkeley, Chief Economist at Google</p>
+</blockquote>
+
+<h2 id="project-details">
+<a id="2-project-details" class="anchor" href="#2-project-details" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Project Details</h2>
+
+<h3 id="how-do-i-complete-this-project">
+<a id="how-do-i-complete-this-project" class="anchor" href="#how-do-i-complete-this-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>How do I Complete this Project?</h3>
+<p>This project is connected to the <a href="https://www.udacity.com/course/ud651">Data Analysis With R course</a> but, depending on your background knowledge of exploratory data analysis, you may not need to take the whole class to complete this project.</p>
+
+<h3 id="introduction">
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h3>
+<p>For the final project, you will conduct your own exploratory data analysis and create an RMD file that explores the variables, structure, patterns, oddities, and underlying relationships of a data set of your choice.</p>
+
+<p>The analysis should be almost like a stream-of-consciousness as you ask questions, create visualizations, and explore your data.</p>
+
+<p>This project is open-ended in that we are not looking for one right answer. As John Tukey stated, “The combination of some data and an aching desire for an answer does not ensure that a reasonable answer can be extracted from a given body of data.” We want you to ask interesting questions about data and give you a chance to explore. We will provide some options of data sets to explore; however, you may choose to explore an entirely different data set. You should be aware that finding your own data set and cleaning that data set into a form that can be read into R can take considerable time and effort. This can add as much as a day, a week, or even months to your project so only adventure to find and clean a data set if you are truly prepared with programming and data wrangling skills.</p>
+
+<p>Now, on to the details!</p>
+
+<h3 id="step-one---choose-your-data-set">
+<a id="step-one---choose-your-data-set" class="anchor" href="#step-one---choose-your-data-set" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step One - Choose your Data Set</h3>
+<p>First, you will choose a data set from the <a href="https://docs.google.com/document/d/1qEcwltBMlRYZT-l699-71TzInWfk4W9q5rTCSvDVMpc/pub"><strong>Data Set Options</strong></a> document. You should choose a data set based on your prior experiences in programming and working with data. The data set you choose will not increase or decrease your chances of passing the final project. In general, <a href="http://vita.had.co.nz/papers/tidy-data.pdf"><strong>tidy data sets</strong></a> are easier to work with since each variable is a column and each row is an observation; there’s no data cleaning or wrangling involved. We offer guidance below for choosing your data set. Time estimates include reading all of the project instructions and rubric, conducting the analysis, and submitting the final project.</p>
+
+<h3 id="step-two---get-organized">
+<a id="step-two---get-organized" class="anchor" href="#step-two---get-organized" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step Two - Get Organized</h3>
+<p>Eventually you’ll want to submit your project (and share it with friends, family, and employers). Get organized before you begin. We recommend creating a single folder on your desktop that will eventually contain:</p>
+
+<ol>
+  <li>The <strong>RMD file</strong> that contains the analysis, final plots and summary, and reflection (in that order)</li>
+  <li>The <strong>HTML file</strong> that will be knitted from your RMD file</li>
+  <li>The <strong>data set</strong> you used (which you will only submit if you found your own data set)</li>
+</ol>
+
+<h3 id="step-three---explore-your-data">
+<a id="step-three---explore-your-data" class="anchor" href="#step-three---explore-your-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step Three - Explore your Data</h3>
+<p>This is the fun part. Start exploring your data! Keep track of your thoughts as you go (in an RMD file). Please refer to the <a href="https://s3.amazonaws.com/content.udacity-data.com/courses/ud651/diamondsExample_2016-05.html"><strong>Example Project</strong></a> that we have provided. Your report should look similar!</p>
+
+<h3 id="step-four---document-your-analysis">
+<a id="step-four---document-your-analysis" class="anchor" href="#step-four---document-your-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step Four - Document your Analysis</h3>
+<p>You will want to document your exploration and analysis in an <strong>RMD file</strong> which you will submit. That file should be formatted in markdown and should contain (in order):</p>
+
+<ol>
+  <li>
+    <p><strong>A stream-of-consciousness analysis and exploration of the data.</strong></p>
+
+    <p>a. Headings and text should organize your thoughts and reflect your analysis as you explored the data.</p>
+
+    <p>b. Plots in this analysis do not need to be polished with labels, units, and titles; these plots are exploratory (quick and dirty). They should, however, be of the appropriate type and effectively convey the information you glean from them.</p>
+
+    <p>c. You can iterate on a plot in the same R chunk, but you don’t need to show every plot iteration in your analysis.</p>
+  </li>
+  <li>
+    <p><strong>A section at the end called “Final Plots and Summary”</strong></p>
+
+    <p>You will select three plots from your analysis to polish and share in this section. The three plots should show different trends and should be polished with appropriate labels, units, and titles (see the <a href="https://review.udacity.com/#!/projects/3165188753/rubric"><strong>Project Rubric</strong></a> for more information).</p>
+  </li>
+  <li>
+    <p><strong>A final section called “Reflection”</strong></p>
+
+    <p>This should contain a few sentences about your struggles, successes, and ideas for future exploration on the data set (see the <a href="https://review.udacity.com/#!/projects/3165188753/rubric"><strong>Project Rubric</strong></a> for more information).</p>
+  </li>
+</ol>
+
+<h3 id="step-five---knit-your-rmd-file">
+<a id="step-five---knit-your-rmd-file" class="anchor" href="#step-five---knit-your-rmd-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step Five - Knit your RMD file</h3>
+<p>Your knitted RMD file should not be one long chunk of R code. It should contain text and plots interspersed throughout. The goal is to give the person reading the file insight into what you were thinking as you explored your data.</p>
+
+<h3 id="step-six---document-your-data-if-you-chose-your-own-data-set">
+<a id="step-six---document-your-data-if-you-chose-your-own-data-set" class="anchor" href="#step-six---document-your-data-if-you-chose-your-own-data-set" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step Six - Document your Data (if you chose your own data set)</h3>
+<p>The data set you settle on (only if you chose your own) should include a text file, like those in the R documentation (e.g. ?diamonds) that describes the source of your data and an explanation of the variables in the data set (definition of any variables, units, levels of categorical variables, and the data generating process, such as how data was collected if possible).</p>
+
+<h2 id="project-template-rmd-file">
+<a id="3-project-template-rmd-file" class="anchor" href="#3-project-template-rmd-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Project Template RMD File</h2>
+<p>### Project Template File
+Please download the <a href="https://s3.amazonaws.com/udacity-hosted-downloads/ud651/projectTemplate.Rmd"><strong>project template file</strong></a> to get started on your analysis.</p>
+
+<h3 id="formatting-notes">
+<a id="formatting-notes" class="anchor" href="#formatting-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Formatting Notes</h3>
+<p>We want you to share a readable RMD file. To help you prepare your project to share with others, please look over the following notes.</p>
+
+<ol>
+  <li>
+    <p>The knitted HTML output should be readable. Be sure to review your knitted HTML file and check that the code and plots appear correct.</p>
+  </li>
+  <li>
+    <p>Comments for R code in a RMD or R-Markdown file are included inside of r blocks by using a hash or pound symbol.</p>
+
+    <p><code class="highlighter-rouge"><span class="w">
+ </span><span class="p">{</span><span class="err">r</span><span class="p">}</span><span class="w">
+ </span><span class="err">library(ggplot</span><span class="mi">2</span><span class="err">)</span><span class="w">
+ </span><span class="err">#</span><span class="w"> </span><span class="err">This</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">an</span><span class="w"> </span><span class="err">example</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">comment</span><span class="w"> </span><span class="err">that</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">not</span><span class="w"> </span><span class="err">actual</span><span class="w"> </span><span class="err">code.</span><span class="w">
+</span></code></p>
+  </li>
+  <li>
+    <p>In a RMD or R-Markdown file, use of the hash or pound symbol (#) outside of r blocks of code creates an H1 header.</p>
+
+    <div class="highlighter-rouge">
+<pre class="highlight"><code> ##THIS IS AN H1 HEADER
+</code></pre>
+    </div>
+
+    <p>You won’t see the hash symbol in front of the text above once you knit the HTML file. See <a href="http://daringfireball.net/projects/markdown/syntax"><strong>Markdown Syntax</strong></a> for additional help with Markdown formatting.</p>
+  </li>
+  <li>
+    <p>Check that all your plots can be viewed and that they are sized appropriately for the output, which is the knitted HTML file.</p>
+  </li>
+</ol>
+
+<h2 id="evaluation-and-submission">
+<a id="4-evaluation-and-submission" class="anchor" href="#4-evaluation-and-submission" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Evaluation and Submission</h2>
+
+<h3 id="evaluation">
+<a id="evaluation" class="anchor" href="#evaluation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Evaluation</h3>
+<p>Use the <a href="https://review.udacity.com/#!/projects/3165188753/rubric"><strong>Project Rubric</strong></a> to review your project.</p>
+
+<h3 id="submission">
+<a id="submission" class="anchor" href="#submission" aria-hidden="true"><span class="octicon octicon-link"></span></a>Submission</h3>
+<ol>
+  <li>the RMD file containing the analysis (final plots and summary, and reflection)</li>
+  <li>the HTML file knitted from the RMD file using the knitr package</li>
+  <li>the original data set and source if you used your own data rather than one recommended by Udacity (Note: do not submit a data set if you used one that Udacity recommended)</li>
+  <li>A list of Web sites, books, forums, blog posts, github repositories, etc. that you referred to or used in creating your submission (add N/A if you did not use any such resources).</li>
+</ol>
+
+<h2 id="example-project">
+<a id="5-example-project" class="anchor" href="#5-example-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. Example Project</h2>
+
+<h3 id="example-project-1">
+<a id="example-project" class="anchor" href="#example-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example Project</h3>
+<p>Your final project will be an analysis in which you analyze the variables and relationships within a data set. Your <strong>final project</strong> should look similar to this <a href="https://s3.amazonaws.com/content.udacity-data.com/courses/ud651/diamondsExample_2016-05.html"><strong>Example Project</strong></a>. It should follow the same structure with an <strong>Analysis</strong> section, a <strong>Final Plots</strong> section, and a <strong>Reflection</strong> section. We will provide a template for you to use with these sections already included.</p>
+
+<p>Take at least 10 minutes to review the example project to get a sense of what you will need to do before starting your project.</p>
+
+<h3 id="more-udacious-projects">
+<a id="more-udacious-projects" class="anchor" href="#more-udacious-projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>More Udacious Projects</h3>
+<p>These projects go above and beyond the course material, and we hope they serve as inspiration to work with data that interests you and to ask interesting questions.</p>
+
+<p><a href="https://s3.amazonaws.com/udacity-hosted-downloads/ud651/AtlanticHurricaneTracking.html"><strong>Climatology of Atlantic Hurricanes</strong></a> by Dean D. Churchill</p>
+
+<p><a href="https://s3.amazonaws.com/udacity-hosted-downloads/ud651/GeographyOfAmericanMusic.html"><strong>Geography of American Musicians</strong></a> by Stefan Zapf</p>
+
+<h2 id="common-problem-with-project-submissions">
+<a id="6-common-problem-with-project-submissions" class="anchor" href="#6-common-problem-with-project-submissions" aria-hidden="true"><span class="octicon octicon-link"></span></a>6. Common Problem with Project Submissions</h2>
+
+<h3 id="common-problems-with-project-submissions">
+<a id="common-problems-with-project-submissions" class="anchor" href="#common-problems-with-project-submissions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Common Problems with Project Submissions</h3>
+<p>To help you succeed, we recommend comparing your project submission against the following list of common problems. Your project must <strong>avoid</strong> these common problems in order to pass.</p>
+
+<ul>
+  <li>Data processing or transformations (creating a categorical variable) should be included in the RMD file and the final knitted HTML output.</li>
+  <li>Reflection section is not included.</li>
+  <li>Reflection section is not the last section in the RMD file.</li>
+  <li>Final Plots section is not included.</li>
+  <li>Final Plots section is not at the end of the RMD file before the Reflection section.</li>
+  <li>Final Plots section does not contain three plots.</li>
+  <li>One or more plots in the Final Plots section do not reveal a finding or pattern in the data set.</li>
+  <li>Final Plots are not polished and are missing titles or units.</li>
+  <li>Inappropriate plots are chosen for data in the Final Plots section.</li>
+</ul>
+
+<h3 id="creating-effective-plots">
+<a id="creating-effective-plots" class="anchor" href="#creating-effective-plots" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating Effective Plots</h3>
+<p>The <strong>Final Plots</strong> section in your RMD file should contain three polished plots that give insight into the data set that you investigated.</p>
+
+<p><strong>Each plot should also contain a caption or description about what the plot shows.</strong></p>
+
+<p>In determining whether or not you have three strong plots, please consult the document, <a href="https://docs.google.com/document/d/1-f3wM3mJSkoWxDmPjsyRnWvNgM57YUPloucOIl07l4c/pub"><strong>Creating Effective Plots</strong></a>. The document covers four common problems that project evaluators have encountered in the past and how those plots can be improved.</p>
+
+      <footer class="entry-meta">
+        <span class="entry-tags"><a href="/tags/#OIT" title="Pages tagged OIT" class="tag"><span class="term">OIT</span></a><a href="/tags/#ITEC587" title="Pages tagged ITEC587" class="tag"><span class="term">ITEC587</span></a><a href="/tags/#Statistical-Computing" title="Pages tagged Statistical-Computing" class="tag"><span class="term">Statistical-Computing</span></a></span>
+        
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/intro-r-final-project/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/intro-r-final-project/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/intro-r-final-project/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    
+    <div class="read-more">
+  
+    <div class="read-more-header">
+      <a href="/background-image/" class="read-more-btn">Read More</a>
+    </div><!-- /.read-more-header -->
+    <div class="read-more-content">
+      <h3><a href="/background-image/" title="Post with a Background Image">Post with a Background Image</a></h3>
+      <p>Sample post with a background image CSS override. <a href="/background-image/">Continue reading</a></p>
+    </div><!-- /.read-more-content -->
+  
+  <div class="read-more-list">
+    
+      <div class="list-item">
+        <h4><a href="/code-highlighting-post/" title="Syntax Highlighting Post">Syntax Highlighting Post</a></h4>
+        <span>Published on August 16, 2013</span>
+      </div><!-- /.list-item -->
+    
+      <div class="list-item">
+        <h4><a href="/sample-link-post/" title="Sample Link Post">Sample Link Post</a></h4>
+        <span>Published on August 12, 2013</span>
+      </div><!-- /.list-item -->
+    
+  </div><!-- /.read-more-list -->
+</div><!-- /.read-more -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    <span>&copy; 2017 Ray Lei. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/hpstr-jekyll-theme/" rel="nofollow">HPSTR Theme</a>.</span>
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/assets/js/scripts.min.js"></script>
+
+
+
+	        
+
+</body>
+</html>
