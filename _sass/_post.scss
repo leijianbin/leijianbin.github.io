@@ -1,0 +1,32 @@
+/* ==========================================================================
+   Page layout
+   ========================================================================== */
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background-color: $body-color;
+}
+
+
+a:visited {
+    color: rgba(0, 62, 183, 0.8);
+}
+
+a {
+    text-decoration: none;
+    color: rgba(0, 4, 247, 0.8);
+}
+
+.toc-h3 {
+	list-style: none;
+}
+
+.section-nav {
+  background-color: #FFF;
+  margin: 5px 0;
+  padding: 10px 30px;
+  border: 1px solid #E8E8E8;
+  border-radius: 3px;
+}
